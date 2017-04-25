@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vr</title>
+	<style type="text/css">
+		div{
+			width: 380px;
+			height: 380px;
+			position: relative;
+			margin: 100px auto;
+			overflow: hidden;
+		}
+		ul{
+			width: 1520px;
+			position: relative;
+		}
+		li{
+			float: left;
+			width: 380px;
+		}
+	</style>
+</head>
+<body>
+<div>
+<ul>
+	<li><img class="img1" src="content/images/IXEYI5QUQP7UQSK63P3WA888_7500x1250.jpg_r@380w"></li>
+	<li><img class="img2" src="content/images/IXEYI5QUQP7UQSK63P3WA888_7500x1250.jpg_b@380w"></li>
+	<li><img class="img3" src="content/images/IXEYI5QUQP7UQSK63P3WA888_7500x1250.jpg_l@380w"></li>
+	<li><img class="img4" src="content/images/IXEYI5QUQP7UQSK63P3WA888_7500x1250.jpg_f@380w"></li>
+</ul>
+ 
+ 
+ 
+ 	
+</div>
+<script type="text/javascript" src="content/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(function () {
+
+	var slideShow=$("div"), 
+		ul=slideShow.find("ul");
+	var timer=null; 
+	var iNow=0; 
+  
+	timer=setInterval(function(){ //打开定时器
+		iNow++;  
+		console.log(iNow) 
+		if(iNow>1000){
+			iNow=0;
+		}
+		ul.animate({
+			"left":-5*iNow, 
+		})
+	},100,'linear'); 
+})
+
+	
+</script>
+
+
+</body>
+</html>
